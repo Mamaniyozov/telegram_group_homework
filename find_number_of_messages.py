@@ -10,4 +10,14 @@ def find_number_of_messages(data: dict)->int:
         int: Total number of messages.
     
     """
-    return
+    users=data['messages']
+    name=users['from']
+    m=0
+    for i in users:
+        if i=='from':
+            m.append(name)
+
+
+    return m
+data=read_data('data/result.json')
+print(find_number_of_messages(data))
